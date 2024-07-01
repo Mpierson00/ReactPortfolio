@@ -5,23 +5,26 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
-import Landscape from './components/Landscape';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SpaceBackground from './components/SpaceBackground';
 
 const App = () => (
-  <Router>
-    <div style={{ position: 'relative', minHeight: '100vh', paddingBottom: '60px' }}>
-      <Landscape />
-      <Header />
-      <Routes>
-        <Route path="/" element={<AboutMe />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
-      </Routes>
-      <Footer />
+  <div style={{ position: 'relative', minHeight: '100vh', paddingBottom: '60px' }}>
+    <SpaceBackground />
+    <Header />
+    <div id="about">
+      <AboutMe />
     </div>
-  </Router>
+    <div id="portfolio">
+      <Portfolio />
+    </div>
+    <div id="contact">
+      <Contact />
+    </div>
+    <div id="resume">
+      <Resume />
+    </div>
+    <Footer />
+  </div>
 );
 
 export default App;

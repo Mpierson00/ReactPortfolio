@@ -1,23 +1,25 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
-  const location = useLocation();
+  const handleScroll = (event, id) => {
+    event.preventDefault();
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <nav>
       <ul>
-        <li className={location.pathname === '/' ? 'active' : ''}>
-          <Link to="/">About Me</Link>
+        <li>
+          <a href="#about" onClick={(event) => handleScroll(event, 'about')}>About Me</a>
         </li>
-        <li className={location.pathname === '/portfolio' ? 'active' : ''}>
-          <Link to="/portfolio">Portfolio</Link>
+        <li>
+          <a href="#portfolio" onClick={(event) => handleScroll(event, 'portfolio')}>Portfolio</a>
         </li>
-        <li className={location.pathname === '/contact' ? 'active' : ''}>
-          <Link to="/contact">Contact</Link>
+        <li>
+          <a href="#contact" onClick={(event) => handleScroll(event, 'contact')}>Contact</a>
         </li>
-        <li className={location.pathname === '/resume' ? 'active' : ''}>
-          <Link to="/resume">Resume</Link>
+        <li>
+          <a href="#resume" onClick={(event) => handleScroll(event, 'resume')}>Resume</a>
         </li>
       </ul>
     </nav>
