@@ -12,7 +12,9 @@ header {
   align-items: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
-  position: relative;
+  position: fixed; /* Change to fixed */
+  top: 0; /* Make sure it's fixed to the top */
+  width: 100%;
   z-index: 10;
 }
 
@@ -50,10 +52,10 @@ section {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 100px; /* Adjust to account for fixed header */
   position: relative;
-  z-index: 2; /* Ensure each section takes full height */
-  min-height: 100vh; 
+  z-index: 2;
+  min-height: 100vh; /* Ensure each section takes full height */
 }
 
 section h2 {
