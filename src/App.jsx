@@ -5,13 +5,13 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
-import SpaceBackground from './components/SpaceBackground';
+import Landscape from './components/Landscape';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => (
   <Router>
-    <div style={{ position: 'relative', minHeight: '100vh' }}>
-      <SpaceBackground />
+    <div style={{ position: 'relative', minHeight: '100vh', paddingBottom: '60px' }}>
+      <Landscape />
       <Header />
       <Routes>
         <Route path="/" element={<AboutMe />} />

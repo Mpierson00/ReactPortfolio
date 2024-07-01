@@ -1,9 +1,10 @@
 import React from 'react';
 import Navigation from './Navigation';
+import logo from '../assets/logo.png';
 
 const Header = () => (
   <header>
-    <h1>Michael Pierson's Portfolio</h1>
+    <img src={logo} alt="Logo" className="logo" />
     <Navigation />
   </header>
 );
