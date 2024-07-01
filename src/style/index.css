@@ -3,4 +3,98 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #000;
   color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li.active a {
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.portfolio div {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.portfolio img {
+  border-radius: 10px;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
