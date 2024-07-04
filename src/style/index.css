@@ -91,12 +91,21 @@ img {
   gap: 20px;
 }
 
-.portfolio div {
+.portfolio .project {
   flex: 1 1 calc(33.333% - 20px);
   box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
 }
 
-.portfolio img {
+.portfolio .project h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.portfolio .project img {
   border-radius: 10px;
 }
 

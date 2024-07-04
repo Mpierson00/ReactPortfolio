@@ -1,6 +1,6 @@
 import React from "react";
 import Project from "./Project";
-import pawfinderGif from "../assets/gifs/pawfinder.gif";
+import pawfinderGif from "../assets/pawfinder.gif";
 // import workdaySchedulerGif from '../assets/gifs/workday-scheduler.gif';
 // import weatherApplicationGif from '../assets/gifs/weather-application.gif';
 
