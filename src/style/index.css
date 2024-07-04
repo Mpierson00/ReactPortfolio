@@ -19,9 +19,15 @@ header {
   box-sizing: border-box; /* Ensure padding is included in width */
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   height: 50px;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 nav {
@@ -49,7 +55,8 @@ nav li a {
   font-weight: bold;
 }
 
-nav li a:hover {
+nav li a:hover,
+nav li a.active {
   text-decoration: underline;
 }
 
@@ -161,6 +168,11 @@ form button:hover {
   background-color: #0056b3;
 }
 
+form .error {
+  color: red;
+  font-size: 0.8rem;
+}
+
 /* About Me Section */
 .about-me-content {
   display: flex;
@@ -181,4 +193,16 @@ form button:hover {
   max-width: 800px;
   line-height: 1.6;
   font-size: 1.1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
 }
