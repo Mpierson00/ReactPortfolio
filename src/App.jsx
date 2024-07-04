@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio';
@@ -8,23 +9,30 @@ import Footer from './components/Footer';
 import SpaceBackground from './components/SpaceBackground';
 
 const App = () => (
-  <div style={{ position: 'relative', minHeight: '100vh', paddingBottom: '60px' }}>
-    <SpaceBackground />
-    <Header />
-    <div id="about">
-      <AboutMe />
+  <Router>
+    <div style={{ position: 'relative', minHeight: '100vh', paddingBottom: '60px' }}>
+      <SpaceBackground />
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <AboutMe />
+        </Route>
+        <Route path="/#about">
+          <AboutMe />
+        </Route>
+        <Route path="/#portfolio">
+          <Portfolio />
+        </Route>
+        <Route path="/#contact">
+          <Contact />
+        </Route>
+        <Route path="/#resume">
+          <Resume />
+        </Route>
+      </Switch>
+      <Footer />
     </div>
-    <div id="portfolio">
-      <Portfolio />
-    </div>
-    <div id="contact">
-      <Contact />
-    </div>
-    <div id="resume">
-      <Resume />
-    </div>
-    <Footer />
-  </div>
+  </Router>
 );
 
 export default App;
