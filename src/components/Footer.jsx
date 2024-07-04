@@ -8,7 +8,7 @@ const Footer = () => (
       <a href="https://github.com/Mpierson00" target="_blank" rel="noopener noreferrer">
         <FaGithub />
       </a>
-      <a href="www.linkedin.com/in/michael-pierson-22a1922aa" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/michael-pierson-22a1922aa" target="_blank" rel="noopener noreferrer">
         <FaLinkedin />
       </a>
     </div>

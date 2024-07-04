@@ -1,5 +1,5 @@
 import React from "react";
-import avatar from "../assets/images/avatar.png";
+import avatar from "../assets/avatar.jpg";
 
 const AboutMe = () => (
   <section id="about">

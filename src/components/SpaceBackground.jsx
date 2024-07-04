@@ -12,26 +12,28 @@ const SpaceBackground = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     currentMount.appendChild(renderer.domElement);
 
-    const starsGeometry = new THREE.Geometry();
+    const starGeometry = new THREE.BufferGeometry();
+    const starMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+
+    const starVertices = [];
     for (let i = 0; i < 10000; i++) {
-      const star = new THREE.Vector3(
-        Math.random() * 2000 - 1000,
-        Math.random() * 2000 - 1000,
-        Math.random() * 2000 - 1000
-      );
-      starsGeometry.vertices.push(star);
+      const x = Math.random() * 2000 - 1000;
+      const y = Math.random() * 2000 - 1000;
+      const z = Math.random() * 2000 - 1000;
+      starVertices.push(x, y, z);
     }
 
-    const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff });
-    const starField = new THREE.Points(starsGeometry, starsMaterial);
-    scene.add(starField);
+    starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
 
     camera.position.z = 1;
 
     const animate = () => {
       requestAnimationFrame(animate);
-      starField.rotation.x += 0.0001;
-      starField.rotation.y += 0.0001;
+      stars.rotation.x += 0.0001;
+      stars.rotation.y += 0.0001;
       renderer.render(scene, camera);
     };
 
