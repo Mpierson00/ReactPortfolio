@@ -1,9 +1,17 @@
-import React from 'react';
+import React from "react";
 
 const Resume = () => (
   <section>
     <h2>Resume</h2>
-    <p>Link to resume or detailed resume here.</p>
+    <div className="resume-content">
+      <a
+        href="/assets/Michael_Pierson_Resume.pdf"
+        download
+        className="download-button"
+      >
+        Download Resume
+      </a>
+    </div>
   </section>
 );
 
